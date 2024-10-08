@@ -95,10 +95,18 @@ function App(): React.JSX.Element {
          </Section><Section title="Learn More">
             Read the docs to discover what to do next:
            
-         </Section><Section title="Learn More">
+            </Section>
+            <Section title="Learn More">
+            Read the docs to discover what to do next:
+           
+         </Section>  <Section title="Learn More">
+            Read the docs to discover what to do next:
+           
+         </Section>  <Section title="Learn More">
             Read the docs to discover what to do next:
            
          </Section>
+         
           <LearnMoreLinks />
         </View>
       </ScrollView>
