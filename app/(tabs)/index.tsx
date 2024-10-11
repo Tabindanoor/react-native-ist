@@ -3,11 +3,18 @@ import { Image, StyleSheet, Platform } from 'react-native';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
+import { Text } from 'react-native';
+import { View } from 'react-native';
 import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
   return (
     <ThemedView style={styles.titleContainer}>
+      <View>
+        <Text>
+          Hello Bhai log Kesay Home Screen
+        </Text>
+      </View>
       <ThemedText type="title" >Welcome!!!!</ThemedText>
       <ThemedText type="title" >Welcome!!!!</ThemedText>
       <HelloWave />

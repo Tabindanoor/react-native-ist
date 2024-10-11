@@ -10,6 +10,7 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
+
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
@@ -35,3 +36,19 @@ export default function RootLayout() {
     </ThemeProvider>
   );
 }
+
+
+// import { StyleSheet, Text, View } from 'react-native'
+// import React from 'react'
+
+// const _layout = () => {
+//   return (
+//     <View>
+//       <Text>_layout</Text>
+//     </View>
+//   )
+// }
+
+// export default _layout
+
+// const styles = StyleSheet.create({})
