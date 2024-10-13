@@ -1,4 +1,5 @@
 import CustomComponent from '@/components/CustomComponent';
+import ListComponent from '@/components/ListComponent';
 import { StyleSheet, Text, View } from 'react-native';
 
 const HomeScreen = () => {
@@ -6,6 +7,7 @@ const HomeScreen = () => {
     <View style={mystyle.container}>
       <Text style={mystyle.textStyle}>Hello Tabinda Noor, Start your work now</Text>
       <CustomComponent/>
+      <ListComponent/>
     </View>
   );
 };

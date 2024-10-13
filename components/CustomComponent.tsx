@@ -23,8 +23,7 @@ export default CustomComponent;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
-    fontSize: 18,
+     fontSize: 18,
     padding: 10,
   },
 });
