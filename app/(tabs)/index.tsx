@@ -15,6 +15,7 @@ const HomeScreen = () => {
 const mystyle = StyleSheet.create({
   container: {
     flexDirection: 'column',
+    flex:1,
     alignItems: 'center',
     margin: 40, // Use a numeric value for margin
   },
