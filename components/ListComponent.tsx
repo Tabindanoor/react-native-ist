@@ -38,9 +38,9 @@ const ListComponent = () => {
 
       {/* with de-structuring */}
       
-      {/* <FlatList data={myData} renderItem={({item})=>{
+      <FlatList data={myData} renderItem={({item})=>{
         return <Text>{item.name}</Text>
-      }} /> */}
+      }} />
     </View>
   )
 }
