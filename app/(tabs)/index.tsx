@@ -1,13 +1,17 @@
 import CustomComponent from '@/components/CustomComponent';
+import ImageComponent from '@/components/ImageComponent';
 import ListComponent from '@/components/ListComponent';
+import { ThemedText } from '@/components/ThemedText';
 import { StyleSheet, Text, View } from 'react-native';
+
 
 const HomeScreen = () => {
   return (
     <View style={mystyle.container}>
-      <Text style={mystyle.textStyle}>Hello Tabinda Noor, Start your work now</Text>
-      <CustomComponent/>
+      <ThemedText style={mystyle.textStyle}>Hello Tabinda Noor, Start your work now</ThemedText>
+      {/* <CustomComponent/>
       <ListComponent/>
+      <ImageComponent/> */}
     </View>
   );
 };

@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
+import { ThemedText } from './ThemedText';
 
 interface TypeProps {
   firstname: string;
@@ -13,7 +14,7 @@ const CustomComponent = () => {
 
   return (
     <View>
-      <Text style={styles.container}>CustomComponent is here</Text>
+      <ThemedText style={styles.container}>CustomComponent is here</ThemedText>
       {myNameElement({ firstname: "Tabinda", secondname: "Noor" })}
     </View>
   );

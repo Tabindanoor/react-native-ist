@@ -1,4 +1,4 @@
-import { StyleSheet, View, FlatList } from 'react-native'
+import { StyleSheet, View, FlatList, Text } from 'react-native'
 import React from 'react'
 import { ThemedText } from './ThemedText'
 
@@ -19,21 +19,24 @@ const ListComponent = () => {
 
   return (
     <View style={styles.view}>
-      <ThemedText>ListComponent is Here</ThemedText>
+      <ThemedText >ListComponent is Here</ThemedText>
 
-      {/* Without de-structuring */}
       <FlatList
         data={myData}
-        keyExtractor={(item) => item.key          
-        }
-        // showsHorizontalScrollIndicator=  {false}
-        // showsVerticalScrollIndicator= {false}
-        // horizontal // If you want verstical scrolling, remove this line
+        keyExtractor={(item) => item.key }
+        showsVerticalScrollIndicator={false}
+        // showsHorizontalScrollIndicator={false}
+        // numColumns={2}
+
+        // for horizontally aligned lists
+        // horizontal
         renderItem={({ item }) => (
           <ThemedText style={styles.list}>{item.name}</ThemedText>
         )}
         contentContainerStyle={{ paddingBottom: 20 }} // Optional: Adds spacing at the bottom
       />
+
+      
     </View>
   )
 }
@@ -51,7 +54,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   view: {
-    flex: 1,
+    // flex: 1,
     padding: 10,
     backgroundColor: '#f2f2f2',
     justifyContent: 'center',
