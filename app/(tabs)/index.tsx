@@ -4,14 +4,13 @@ import ListComponent from '@/components/ListComponent';
 import { ThemedText } from '@/components/ThemedText';
 import { StyleSheet, Text, View } from 'react-native';
 
-
 const HomeScreen = () => {
   return (
     <View style={mystyle.container}>
       <ThemedText style={mystyle.textStyle}>Hello Tabinda Noor, Start your work now</ThemedText>
-      {/* <CustomComponent/>
-      <ListComponent/>
-      <ImageComponent/> */}
+      {/* <CustomComponent/> */}
+      {/* <ListComponent/> */}
+      <ImageComponent/> 
     </View>
   );
 };
