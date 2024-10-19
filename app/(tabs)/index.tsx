@@ -1,3 +1,4 @@
+import ButtonComponent from '@/components/ButtonComponent';
 import CustomComponent from '@/components/CustomComponent';
 import ImageComponent from '@/components/ImageComponent';
 import ListComponent from '@/components/ListComponent';
@@ -10,6 +11,7 @@ const HomeScreen = () => {
       <ThemedText style={mystyle.textStyle}>Hello Tabinda Noor, Start your work now</ThemedText>
       {/* <CustomComponent/> */}
       {/* <ListComponent/> */}
+      <ButtonComponent/>
       <ImageComponent/> 
     </View>
   );
