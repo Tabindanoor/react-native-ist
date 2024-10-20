@@ -2,16 +2,21 @@ import ButtonComponent from '@/components/ButtonComponent';
 import CustomComponent from '@/components/CustomComponent';
 import ImageComponent from '@/components/ImageComponent';
 import ListComponent from '@/components/ListComponent';
+import NetflixCard from '@/components/NetflixCard';
 import NetflixList from '@/components/NetflixCard';
 import PropsDealing from '@/components/PropsDealing';
 import { ThemedText } from '@/components/ThemedText';
 import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const HomeScreen = () => {
   return (
-    <View style={mystyle.container}>
+    <SafeAreaView>
+      <ScrollView>
+      <View style={mystyle.container}>
       <ThemedText style={mystyle.textStyle}>Hello Tabinda Noor, Start your work now</ThemedText>
-      {/* <CustomComponent/> */}
+      <CustomComponent/>
       {/* <ListComponent/> */}
       {/* <ButtonComponent/>
       <ImageComponent/>  */}
@@ -20,8 +25,11 @@ const HomeScreen = () => {
 
       <PropsDealing source={require('../../assets/images/pic.jpg')}  /> */}
 
-      <NetflixList/>
+      <NetflixCard/>
     </View>
+      </ScrollView>
+    </SafeAreaView>
+  
   );
 };
 

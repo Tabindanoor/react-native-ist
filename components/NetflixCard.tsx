@@ -1,63 +1,57 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, FlatList, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, Image, Button, Alert } from 'react-native';
 
-interface myDataProps{
-    id:number,
-    title:string,
-    image:string,
-}
+const NetflixCard = () => {
 
-const data = [
-  { id: '1', title: 'Movie 1', image: 'https://via.placeholder.com/300x450' },
-  { id: '2', title: 'Movie 2', image: 'https://via.placeholder.com/300x450' },
-  { id: '3', title: 'Movie 3', image: 'https://via.placeholder.com/300x450' },
-  { id: '4', title: 'Movie 4', image: 'https://via.placeholder.com/300x450' },
-];
+  const handleButtonPress = () => {
+    // Replace this with navigation or open Netflix URL
+    Alert.alert('Button Pressed', 'Moving towards Netflix!');
+  };
 
-const NetflixCard = ({ item }:myDataProps) => {
   return (
     <View style={styles.card}>
-      <Image source={{ uri: item.image }} style={styles.image} />
-      <Text style={styles.title}>{item.title}</Text>
-    </View>
-  );
-};
-
-const NetflixList = () => {
-  return (
-    <View style={styles.container}>
-      <FlatList
-        data={data}
-        keyExtractor={(item) => item.id}
-        // horizontal
-        showsVerticalScrollIndicator={false}
-        renderItem={({ item }) =>
-             <NetflixCard item={item} />}
-        // showsHorizontalScrollIndicator={false}
+      <Image 
+        source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg' }}
+        style={styles.image}
       />
+      <Text style={styles.title}>Netflix Show</Text>
+      <Text style={styles.description}>Watch the latest movies and TV shows on Netflix.</Text>
+      <Button title="Go to Netflix" onPress={handleButtonPress} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    marginTop: 20,
-  },
   card: {
-    marginRight: 10,
-    width: Dimensions.get('window').width * 0.35, // Adjust card width
+    backgroundColor: '#141414',
+    borderRadius: 10,
+    padding: 20,
+    alignItems: 'center',
+    marginVertical: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 5,
   },
   image: {
-    width: '100%',
-    height: Dimensions.get('window').height * 0.25, // Adjust image height
+    width: 100,
+    height: 100,
     borderRadius: 10,
+    marginBottom: 10,
   },
   title: {
-    color: 'white',
-    fontSize: 16,
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#FFF',
+    marginBottom: 10,
+  },
+  description: {
+    fontSize: 14,
+    color: '#AAA',
     textAlign: 'center',
-    marginTop: 5,
+    marginBottom: 20,
   },
 });
 
-export default NetflixList;
+export default NetflixCard;
