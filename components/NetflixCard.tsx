@@ -1,11 +1,17 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, Button, Alert } from 'react-native';
+import { View, Text, StyleSheet, Image, Button, Alert, Linking } from 'react-native';
+import { ThemedText } from './ThemedText';
 
 const NetflixCard = () => {
 
   const handleButtonPress = () => {
-    // Replace this with navigation or open Netflix URL
-    Alert.alert('Button Pressed', 'Moving towards Netflix!');
+    // Open Netflix website using Linking
+    
+    Linking.openURL('https://www.netflix.com/pk/')
+    // .then(() => {
+      // alert("hehehe");
+    // })
+    .catch(err => console.error("Couldn't load page", err));
   };
 
   return (
@@ -14,8 +20,8 @@ const NetflixCard = () => {
         source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg' }}
         style={styles.image}
       />
-      <Text style={styles.title}>Netflix Show</Text>
-      <Text style={styles.description}>Watch the latest movies and TV shows on Netflix.</Text>
+      <ThemedText style={styles.title}>Netflix Show</ThemedText>
+      <ThemedText style={styles.description}>Watch the latest movies and TV shows on Netflix.</ThemedText>
       <Button title="Go to Netflix" onPress={handleButtonPress} />
     </View>
   );
@@ -45,12 +51,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#FFF',
     marginBottom: 10,
+    // fontFamily:"Poppins"
   },
   description: {
     fontSize: 14,
     color: '#AAA',
     textAlign: 'center',
     marginBottom: 20,
+    
   },
 });
 
