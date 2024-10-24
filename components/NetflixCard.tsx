@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, Button, Alert, Linking } from 'react-native';
+import { View, Text, StyleSheet, Image, Button, Linking } from 'react-native';
 import { ThemedText } from './ThemedText';
 
 const NetflixCard = () => {
