@@ -8,7 +8,6 @@ const NetflixCard = () => {
     // Open Netflix website using Linking
     
     Linking.openURL('https://www.netflix.com/pk/')
-    Linking.openURL('https://www.netflix.com/pk/')
     // .then(() => {
       // alert("hehehe");
     // })
