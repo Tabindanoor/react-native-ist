@@ -20,6 +20,10 @@ const NetflixCard = () => {
         source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg' }}
         style={styles.image}
       />
+      <Image 
+        source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg' }}
+        style={styles.image}
+      />
       <ThemedText style={styles.title}>Netflix Show</ThemedText>
       <ThemedText style={styles.description}>Watch the latest movies and TV shows on Netflix.</ThemedText>
       <Button title="Go to Netflix" onPress={handleButtonPress} />
