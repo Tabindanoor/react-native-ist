@@ -22,7 +22,8 @@ const NetflixCard = () => {
       />
   
       <ThemedText style={styles.title}>Netflix Show</ThemedText>
-      <Text>I want to work But And Alla</Text>
+      <Text>I want to work But And Allah will help </Text>
+      <Text>I want to to go to Germany  </Text>
       <ThemedText style={styles.description}>Watch the latest movies and TV shows on Netflix.</ThemedText>
       <Button title="Go to Netflix" onPress={handleButtonPress} />
     </View>
