@@ -25,6 +25,7 @@ const NetflixCard = () => {
       <Text>I want to work But And Allah will help </Text>
       <Text>I want to to go to Germany  </Text>
       <Text>Why i am doing that all day   </Text>
+      <Text>I am wasting my time all the day   </Text>
       <Text>Dont know why is it happening </Text>
       <Text>I will do it in sha Allah</Text>
       <ThemedText style={styles.description}>Watch the latest movies and TV shows on Netflix.</ThemedText>
