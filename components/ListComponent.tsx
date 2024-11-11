@@ -20,7 +20,6 @@ const ListComponent = () => {
   return (
     <View style={styles.view}>
       <ThemedText >ListComponent is Here with  </ThemedText>
-      <ThemedText >ListComponent is Here with  </ThemedText>
 
       <FlatList
         data={myData}
