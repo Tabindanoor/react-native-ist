@@ -54,7 +54,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   view: {
-    // flex: 1,
     padding: 10,
     backgroundColor: '#f2f2f2',
     justifyContent: 'center',
