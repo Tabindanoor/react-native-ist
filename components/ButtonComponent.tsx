@@ -15,6 +15,7 @@ const ButtonComponent = () => {
             console.log("pressed the single button onPress");
             
             alert("hehe pressed the button")
+            alert("hehe pressed the button")
         }}
         color='#841584'
         
