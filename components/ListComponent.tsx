@@ -45,8 +45,8 @@ export default ListComponent
 
 const styles = StyleSheet.create({
   list: {
-    margin: 10,
-    padding: 10,
+    margin: 5,
+    padding: 5,
     backgroundColor: '#3aa28b',
     color: 'white',
     borderRadius: 5,
@@ -54,7 +54,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   view: {
-    padding: 10,
+    flex:1,
+    padding: 5,
     backgroundColor: '#f2f2f2',
     justifyContent: 'center',
     alignItems: 'center',

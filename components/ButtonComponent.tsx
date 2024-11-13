@@ -1,13 +1,12 @@
 import { Alert, Button, Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { ThemedText } from './ThemedText';
-// import { TouchableOpacity } from 'react-native-gesture-handler';
 import { TouchableOpacity } from 'react-native';
 
 const ButtonComponent = () => {
   return (
     <View>
-      <ThemedText>ButtonComponent</ThemedText>
+      <ThemedText style={styles.mystyleisHere}>ButtonComponent</ThemedText>
       <ThemedText>Difference between button and toucable opacity</ThemedText>
       <Button
         title='This is button '
@@ -56,5 +55,13 @@ const styles = StyleSheet.create({
         width: 200,
         height: 150,
         resizeMode: 'contain'
+    },
+    mystyleisHere:{
+      color: 'white',
+      fontWeight: 'bold',
+      fontSize: 20,
+      marginBottom: 10,
+      marginTop: 20,
+      textAlign: 'center'
     }
 })

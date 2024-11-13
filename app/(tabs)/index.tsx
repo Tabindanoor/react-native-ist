@@ -4,6 +4,7 @@ import ImageComponent from '@/components/ImageComponent';
 import ListComponent from '@/components/ListComponent';
 import NetflixCard from '@/components/NetflixCard';
 import NetflixList from '@/components/NetflixCard';
+import NetflixCards from '@/components/NetflixCards';
 import PropsDealing from '@/components/PropsDealing';
 import { ThemedText } from '@/components/ThemedText';
 import { StyleSheet, Text, View } from 'react-native';
@@ -13,21 +14,22 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 const HomeScreen = () => {
   return (
     <SafeAreaView>
-      <ScrollView>
+      {/* <ScrollView> */}
       <View style={mystyle.container}>
       <ThemedText style={mystyle.textStyle}>Hello Tabinda Noor, Start your work now</ThemedText>
       <CustomComponent/>
       {/* <ListComponent/> */}
-      {/* <ButtonComponent/>
-      <ImageComponent/>  */}
+      {/* <ButtonComponent/> */}
+      {/* <ImageComponent/>  */}
 
-      {/* <PropsDealing source={require('../../assets/images/pic.jpg')} />
+      {/* <PropsDealing source={require('../../assets/images/pic.jpg')} /> */}
 
-      <PropsDealing source={require('../../assets/images/pic.jpg')}  /> */}
+      {/* <PropsDealing source={require('../../assets/images/pic.jpg')}  /> */}
 
-      <NetflixCard/>
+      {/* <NetflixCard/> */}
+      <NetflixCards/>
     </View>
-      </ScrollView>
+      {/* </ScrollView> */}
     </SafeAreaView>
   
   );
