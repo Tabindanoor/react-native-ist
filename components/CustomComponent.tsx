@@ -14,7 +14,7 @@ const CustomComponent = () => {
 
   return (
     <View>
-      <ThemedText style={styles.container}>CustomComponent is here</ThemedText>
+      <ThemedText style={styles.container}>CustomComponent is There</ThemedText>
       {myNameElement({ firstname: "Tabinda", secondname: "Noor" })}
     </View>
   );
