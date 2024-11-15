@@ -11,8 +11,8 @@ interface data{
 }
 // Dummy data for 10 top famous movies and shows
 const data = [
-  { id: '1', title: 'Stranger Things', image: 'https://image-url.com/stranger-things.jpg' },
-  { id: '2', title: 'Money Heist', image: 'https://image-url.com/money-heist.jpg' },
+  { id: '1', title: 'Stranger Things', image: '.././assets/images/pic.jpg' },
+  { id: '2', title: 'Money Heist', image: '.././assets/images/pic.jpg' },
   { id: '3', title: 'The Witcher', image: 'https://image-url.com/the-witcher.jpg' },
   { id: '4', title: 'Bridgerton', image: 'https://image-url.com/bridgerton.jpg' },
   { id: '5', title: 'Squid Game', image: 'https://image-url.com/squid-game.jpg' },
@@ -26,7 +26,9 @@ const data = [
 // Card Component for individual movie/show
 const MovieCard = ({ id, title, image }:data) => (
   <View style={styles.card}>
-    <Image source={{ uri: image }} style={styles.cardImage} />
+   <Image source={require('.././assets/images/pic.jpg')}  style={styles.img}/>
+
+    {/* <Image source={{ uri: image }} style={styles.cardImage} /> */}
     <ThemedText style={styles.cardTitle}>{title}</ThemedText>
   </View>
 );
@@ -66,6 +68,11 @@ const styles = StyleSheet.create({
   sectionContainer: {
     marginBottom: 20,
   },
+  img:{
+    width: 80,
+    height: 80,
+  },
+
   sectionTitle: {
     fontSize: 20,
     fontWeight: 'bold',
