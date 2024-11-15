@@ -26,7 +26,7 @@ const HomeScreen = () => {
 
       {/* <PropsDealing source={require('../../assets/images/pic.jpg')}  /> */}
 
-      {/* <NetflixCard/> */}
+      <NetflixCard/>
       <NetflixCards/>
     </View>
       {/* </ScrollView> */}
