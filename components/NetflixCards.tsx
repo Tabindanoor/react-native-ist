@@ -9,7 +9,6 @@ interface data{
     title: string;
     image: string;
 }
-// Dummy data for 10 top famous movies and shows
 const data = [
   { id: '1', title: 'Stranger Things', image: '.././assets/images/pic.jpg' },
   { id: '2', title: 'Money Heist', image: '.././assets/images/pic.jpg' },
