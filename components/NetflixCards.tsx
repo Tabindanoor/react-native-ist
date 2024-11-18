@@ -10,16 +10,7 @@ interface data{
     image: string;
 }
 const data = [
-  { id: '1', title: 'Stranger Things', image: '.././assets/images/pic.jpg' },
-  { id: '2', title: 'Money Heist', image: '.././assets/images/pic.jpg' },
-  { id: '3', title: 'The Witcher', image: '' },
-  { id: '4', title: 'Bridgerton', image: '' },
-  { id: '5', title: 'Squid Game', image: 'https://image-url.com/squid-game.jpg' },
-  { id: '6', title: 'Breaking Bad', image: 'https://image-url.com/breaking-bad.jpg' },
-  { id: '7', title: 'The Crown', image: 'https://image-url.com/the-crown.jpg' },
-  { id: '8', title: 'Ozark', image: 'https://image-url.com/ozark.jpg' },
-  { id: '9', title: 'Black Mirror', image: 'https://image-url.com/black-mirror.jpg' },
-  { id: '10', title: 'Lupin', image: 'https://image-url.com/lupin.jpg' },
+ 
 ];
 
 // Card Component for individual movie/show
