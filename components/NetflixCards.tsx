@@ -10,7 +10,7 @@ interface data{
     image: string;
 }
 const data = [
- 
+ {id:1,test:true},
 ];
 
 // Card Component for individual movie/show
