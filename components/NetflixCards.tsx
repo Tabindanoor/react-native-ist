@@ -10,7 +10,16 @@ interface data{
     image: string;
 }
 const data = [
- {id:1,test:true},
+ {
+  id: '1',
+  title: 'Title 1',
+  image: 'https://picsum.photos/200/300',
+ },
+ {
+  id: '2',
+  title: 'Title 2',
+  image: 'https://picsum.photos/200/300',
+ }
 ];
 
 // Card Component for individual movie/show
