@@ -27,12 +27,7 @@ const data = [
   title: 'Title 3',
   image: 'https://picsum.photos/200/300',
  },
- {
-  id:'4',
-  title: 'Title 4',
-  image: 'https://picsum.photos/200/300',
-
- }
+ 
 ];
 
 // Card Component for individual movie/show
