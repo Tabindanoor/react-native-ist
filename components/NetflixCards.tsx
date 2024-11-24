@@ -15,11 +15,6 @@ const data = [
   title: 'Title 1',
   image: 'https://picsum.photos/200/300',
  },
- {
-  id: '2',
-  title: 'Title 2',
-  image: 'https://picsum.photos/200/300',
- }
  
 
  
