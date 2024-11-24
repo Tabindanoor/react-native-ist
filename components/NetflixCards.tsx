@@ -21,12 +21,7 @@ const data = [
   image: 'https://picsum.photos/200/300',
  }
  
- ,
- {
-  id: '3',
-  title: 'Title 3',
-  image: 'https://picsum.photos/200/300',
- },
+
  
 ];
 
