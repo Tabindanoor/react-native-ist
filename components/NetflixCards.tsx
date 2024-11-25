@@ -20,7 +20,6 @@ const data = [
  
 ];
 
-// Card Component for individual movie/show
 const MovieCard = ({ id, title, image }:data) => (
   <View style={styles.card}>
    <Image source={require('.././assets/images/pic.jpg')}  style={styles.img}/>
