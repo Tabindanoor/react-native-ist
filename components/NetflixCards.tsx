@@ -1,103 +1,108 @@
+import { StyleSheet, Text, View, FlatList, Image } from 'react-native';
 import React from 'react';
-import { View, Text, FlatList, StyleSheet, Image, Dimensions, ScrollView } from 'react-native';
 import { ThemedText } from './ThemedText';
 
-const { width } = Dimensions.get('window');
-
-interface data{
-    id: string;
-    title: string;
-    image: string;
+interface DataProps {
+  id: string;
+  title: string;
+  image: string;
+  content: string;
 }
-const data = [
- {
-  id: '1',
-  title: 'Title 1',
-  image: 'https://picsum.photos/200/300',
- },
- 
 
- 
+const data: DataProps[] = [
+  {
+    id: "1",
+    title: "Themed Text",
+    image: "https://picsum.photos/200/300",
+    content: "This is a component for displaying text in different themes.",
+  },
+  {
+    id: "2",
+    title: "ButtonComponent",
+    image: "https://picsum.photos/200/300",
+    content: "This is a component for displaying a button.",
+  },
+  {
+    id: "3",
+    title: "CardComponent",
+    image: "https://picsum.photos/200/300",
+    content: "This is a component for displaying a card.",
+  },
+  {
+    id: "4",
+    title: "ImageComponent",
+    image: "https://picsum.photos/200/300",
+    content: "This is a component for displaying an image.",
+  },
+  {
+    id: "5",
+    title: "NetflixCards",
+    image: "https://picsum.photos/200/300",
+    content: "This is a component for displaying a list of Netflix movies/shows.",
+  },
+  {
+    id: "6",
+    title: "NetflixCard",
+    image: "https://picsum.photos/200/300",
+    content: "This is a component for displaying a single Netflix movie/show.",
+  },
 ];
-
-const MovieCard = ({ id, title, image }:data) => (
-  <View style={styles.card}>
-   <Image source={require('.././assets/images/pic.jpg')}  style={styles.img}/>
-
-    {/* <Image source={{ uri: image }} style={styles.cardImage} /> */}
-    <ThemedText style={styles.cardTitle}>{title}</ThemedText>
-  </View>
-);
 
 const NetflixCards = () => {
   return (
-    <ScrollView>
-      {/* Horizontal Scroll */}
-      <View style={styles.sectionContainer}>
-        <ThemedText style={styles.sectionTitle}>Top 10 Movies and Shows</ThemedText>
-        <FlatList
-          data={data}
-          renderItem={({ item }) => <MovieCard id={item.id} title={item.title} image={item.image} />}
-          keyExtractor={(item) => item.id}
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={styles.horizontalScrollContainer}
-        />
-      </View>
-
-      {/* Vertical Scroll */}
-      <View style={styles.sectionContainer}>
-        <ThemedText style={styles.sectionTitle}>More to Watch</ThemedText>
-        <FlatList
-          data={data}
-          renderItem={({ item }) => <MovieCard id={item.id} title={item.title} image={item.image} />}
-          keyExtractor={(item) => item.id}
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={styles.verticalScrollContainer}
-        />
-      </View>
-    </ScrollView>
+    <View style={styles.container}>
+      <ThemedText style={styles.header}>NetflixCards</ThemedText>
+      <FlatList
+        data={data}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <View style={styles.card}>
+            <Text style={styles.title}>{item.title}</Text>
+            <Image source={{ uri: item.image }} style={styles.image} />
+            <Text style={styles.content}>{item.content}</Text>
+          </View>
+        )}
+      />
+    </View>
   );
 };
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginBottom: 20,
-  },
-  img:{
-    width: 80,
-    height: 80,
-  },
+export default NetflixCards;
 
-  sectionTitle: {
-    fontSize: 20,
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    padding: 10,
+  },
+  header: {
+    fontSize: 18,
     fontWeight: 'bold',
-    marginHorizontal: 15,
-    marginVertical: 10,
-  },
-  horizontalScrollContainer: {
-    paddingLeft: 10,
-  },
-  verticalScrollContainer: {
-    paddingHorizontal: 15,
+    marginBottom: 10,
   },
   card: {
-    width: width * 0.6,
-    marginRight: 15,
-    borderRadius: 10,
-    overflow: 'hidden',
+    // backgroundColor: '#f9f9f9',
+    // borderRadius: 4,
+    // padding: 4,
+    // marginBottom: 10,
+    // shadowColor: '#000',
+    // shadowOpacity: 0.1,
+    // shadowRadius: 4,
+    // elevation: 2,
   },
-  cardImage: {
-    width: '100%',
-    height: 200,
-    borderRadius: 10,
+  title: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    marginBottom: 5,
   },
-  cardTitle: {
-    fontSize: 16,
-    fontWeight: '600',
-    textAlign: 'center',
-    marginTop: 5,
+  image: {
+    width: 300,
+    height: 150,
+    borderRadius: 8,
+    marginBottom: 5,
+  },
+  content: {
+    fontSize: 14,
+    color: '#333',
   },
 });
-
-export default NetflixCards;
